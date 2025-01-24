@@ -1,7 +1,9 @@
 import random
 from datetime import datetime
+import typer
+from typing import Dict
 
-def get_currentLocation(launch_time, angle, latitude, longitude):
+def get_currentLocation(launch_time: str, angle: float, latitude: float, longitude: float) -> Dict[str, dict]:
     latitude = round(random.uniform(-90, 90), 4)  # 랜덤 위도 (-90 ~ 90)
     longitude = round(random.uniform(-180, 180), 4)  # 랜덤 경도 (-180 ~ 180)
     altitude = random.randint(200, 1000)  # 랜덤 고도 (200 ~ 1000)
@@ -20,4 +22,12 @@ def get_currentLocation(launch_time, angle, latitude, longitude):
 
 def how_are_you():
     return "fine thankYou and you"
+
+
+def print_currentLocation(launch_time: str, angle: float, latitude: float, longitude: float) -> Dict[str, dict]:
+    r = get_currentLocation(launch_time, angle, latitude, longitude)
+    print(r)
+
+def entry_point():
+    typer.run(print_currentLocation)
 
