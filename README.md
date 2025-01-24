@@ -1,6 +1,8 @@
 # LiveSatProto
 Prototype for tracking real-time satellite positions in orbit.
 
+<img src="https://github.com/user-attachments/assets/2f18b768-c425-4699-9fd0-fcd06a7a1246" width=410 />
+
 # Use
 ```bash
 $ livesat-proto <launch_time> <angle> <latitude> <longitude>
