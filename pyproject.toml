@@ -1,6 +1,6 @@
 [project]
 name = "LiveSatProto"
-version = "0.2.1"
+version = "0.3.0"
 description = "Prototype for tracking real-time satellite positions in orbit."
 authors = [
     {name = "ppabam", email = "tom@diginori.com"},
@@ -24,3 +24,8 @@ livesatproto = "livesatproto.where_now:entry_point"
 [project.urls]
 Homepage = "https://github.com/sunsin-shop/LiveSatProto"
 Issues = "https://github.com/sunsin-shop/LiveSatProto/issues"
+
+[dependency-groups]
+test = [
+    "pytest>=8.3.4",
+]
